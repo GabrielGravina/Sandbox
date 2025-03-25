@@ -1,11 +1,12 @@
 'use server';
 import { PrismaClient } from "@prisma/client";
 import { convertToPlainObject } from "../utils";
-// Get latest procducts
+import { LATEST_PRODUCTS_LIMIT } from "../constants";
+// Get latest products
 
 export async function getLatestProducts() {
     const prisma = new PrismaClient();
-    const data = await prisma.product.findMany({ take: 4, orderBy: { createdAt: 'desc' } });
+    const data = await prisma.product.findMany({ take: LATEST_PRODUCTS_LIMIT, orderBy: { createdAt: 'desc' } });
 
     return convertToPlainObject(data);
 
