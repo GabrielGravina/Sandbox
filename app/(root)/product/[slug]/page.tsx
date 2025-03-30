@@ -8,10 +8,9 @@ const ProductDetailsPage = async (props: {
 
     const product = await getProductBySlug(slug);
     if (!product) notFound();
-
     return (
         <div>
-            {product.name}
+            {product.name}aa
         </div >
     );
 };

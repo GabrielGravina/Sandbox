@@ -14,7 +14,7 @@ const ProductCard = ({ product }: { product: Product }) => {
       </CardHeader>
       <CardContent className="p-4 grid gap-4">
         <div className="text-xs">{product.brand}</div>
-        <Link href={`/products/${product.slug}`}>{product.name}</Link>
+        <Link href={`/product/${product.slug}`}>{product.name}</Link>
         <div className="flex-between gap-4">
           <p>{product.rating}</p>
           {product.stock > 0 ? (
