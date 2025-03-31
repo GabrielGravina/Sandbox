@@ -14,16 +14,16 @@ const eslintConfig = [
       "object-curly-newline": ["error", { "multiline": true }],
       "object-curly-spacing": ["error", "always"],
       'import-newlines/enforce': 'error',
-      
+
       'react/jsx-indent-props': ['error', 2], // Indentação de 2 espaços para props
       'react/jsx-indent': ['error', 2], // Indentação geral de 2 espaços para JSX
 
       'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
       'react/jsx-closing-tag-location': 'error',
       'react/jsx-wrap-multilines': 'error',
-      'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'], // Ajustado
-      'react/jsx-max-props-per-line': ['error', { maximum: 2, when: 'multiline' }] // Ajustado
-      
+      'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
+      'react/jsx-max-props-per-line': ['error', { maximum: 2, when: 'multiline' }]
+
     },
     settings: { next: { rootDir: 'packages/my-app/', }, },
   }),
