@@ -37,6 +37,7 @@ const UserButton = async () => {
             </Button>
           </div>
         </DropdownMenuTrigger>
+        {/* Create react hook for menu content. Remove force mount later */}
         <DropdownMenuContent className='w-56' align='end' forceMount>
           <DropdownMenuLabel className='font-normal'>
             <div className='flex flex-col space-y-1'>
