@@ -40,10 +40,10 @@ export async function signUpUser(prevState: unknown, formData: FormData) {
       name: formData.get('name'),
       email: formData.get('email'),
       password: formData.get('password'),
-      confirmPasswrod: formData.get('confirmPassword'),
+      confirmPassword: formData.get('confirmPassword'),
     });
 
-    const plaiPassword = user.password;
+    const plainPassword = user.password;
 
     user.password = hashSync(user.password, 10);
 
@@ -57,7 +57,7 @@ export async function signUpUser(prevState: unknown, formData: FormData) {
 
     await signIn('credentials', {
       email: user.email,
-      password: plaiPassword,
+      password: plainPassword,
     });
 
     return { success: true, message: 'User registered successfully' };
